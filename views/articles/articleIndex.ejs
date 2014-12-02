@@ -8,9 +8,7 @@
     <h2> <a href="new">New Articles</a></h2>
     <div>
     	<% for (var i = 0; i < MyART.length; i++) { %>
-    	<!-- Create a link for each one, (a href) -->
-    	<!-- ex: articles/<%= i %> -->
-  			<li><%= MyART[i].email %></li>
+  			<li><a href="/articles/<%= i %>"><%= MyART[i].email %></a></li>
 		<% } %>
     </div>
 </body>

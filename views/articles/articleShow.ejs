@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show Articles Here</title>
+</head>
+<body>
+	<div>
+		<% for (var i = 0; i < MyART.length; i++) { %>
+		<li><%= MyART[i].email %></li>
+		<% } %>
+	</div>
+	<div>
+		<div>
+			<% for (var i = 0; i < MyART.length; i++) { %>
+			<li><%= MyART[i].fullName %></li>
+			<% } %>
+		</div>
+		<div>
+			<% for (var i = 0; i < MyART.length; i++) { %>
+			<li><%= MyART[i].funArticle %></li>
+			<% } %>
+		</div>
+	</body>
+	</html>

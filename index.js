@@ -20,20 +20,25 @@ app.get("/articles/new", function(req, res) {
 
 app.post("/articles", function(req,res) {
   articles.push(req.body);
-  //console.log(articles);
+  console.log(articles);
 
   // res.send(req.body);
   res.render("articles/articleNew")	// this is where user is taken upon submit
 });
 
 app.get("/articles/:id", function(req,res){
-	//index = query the param
-	//send back the object with the id,
-	//ex: articles[the index you paramed]
-	//pass that object to the new page
-		//	show.ejs could display contents from database articles based on link selected and index #
-	res.render()
-}
+	var index = req.params.id
+	var article = articles[index]
+
+	// res.render("articles/articleIndex", {MyART: articles})
+// 	//index = query the param
+// 	//send back the object with the id,
+// 	//ex: articles[the index you paramed]
+// 	//pass that object to the new page
+// 		//	show.ejs could display contents from database articles based on link selected and index #
+	// res.render("articles/articleShow", {MyART: articles});
+		res.render("articles/show", article);
+});
 app.listen(3000);
 
 // .email);

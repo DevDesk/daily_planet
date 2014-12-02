@@ -35,3 +35,6 @@ All your article related views should be in an `views/articles` folder. Each art
 ## Bonus
 
 Include some navigation links to help the user navigate the site.
+
+    	<!-- Create a link for each one, (a href) -->
+    	<!-- ex: articles/<%= i %> -->
